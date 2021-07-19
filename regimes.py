@@ -153,9 +153,15 @@ def lasheras_regime():
 
 def farago():
     # loading files
-    superpulsating = np.loadtxt('farago_regime_superpulsating.csv', delimiter=',')
-    rayleigh = np.loadtxt('farago_regime_data_rayleigh.csv', delimiter=',')
-    membrane = np.loadtxt('farago_regime_data_membrane.csv', delimiter=',')
+    superpulsating = np.loadtxt('farago_regime_superpulsating.csv',
+                                delimiter=',')
+    rayleigh = np.loadtxt('farago_regime_data_rayleigh.csv',
+                          delimiter=',')
+    membrane = np.loadtxt('farago_regime_data_membrane.csv',
+                          delimiter=',')
 
     # setting up plots
-    
+    fig, ax = plt.subplots()
+    ax.plot(superpulsating[:, 0], superpulsating[:, 1])
+    ax.plot(rayleigh[:, 0], rayleigh[:, 1])
+    ax.plot(membrane[:, 0], membrane[:, 1])
