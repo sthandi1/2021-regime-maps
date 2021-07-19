@@ -145,7 +145,7 @@ def lasheras_regime():
     ax.set_xlim(1e-3, 1e4)
     ax.set_ylim(10, 1e6)
     ax.set_xlabel('We')
-    ax.set_ylabel('$\mathrm{Re}_l$')
+    ax.set_ylabel('$\\mathrm{Re}_l$')
 
     fig.set_size_inches(7, 5)
     fig.savefig(fname='lasheras_regime.pgf', bbox_inches='tight')
