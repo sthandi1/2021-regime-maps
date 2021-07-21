@@ -203,12 +203,16 @@ def farago():
     # labelling rayleigh regime
     ax.text(1e-1, 1e3, 'Rayleigh regime')
     # labelling superpulsating regime
-    ax.text(5e1, 3e2, 'Superpulsating regime')
+    ax.text(8e0, 2e2, 'Superpulsating regime')
     # labelling fiber type regime
-    ax.text(1e2, 1e4, 'Fiber type regime')
+    ax.text(1.3e2, 1e4, 'Fiber type \nregime')
     # annotating with arrow membrane type regime
-    ax.annotate('Membrane type regime', xy=(5e1, 8e3), xytext=(1e1, 3e4),
+    ax.annotate('Membrane type regime', xy=(5e1, 8e3), xytext=(5e0, 3e4),
                 arrowprops=dict(facecolor='black', width=0.5, headwidth=7))
     ax.legend()
     fig.set_size_inches(6, 4)
     fig.savefig('farago_chigier_cases_regimes.pgf', bbox_inches='tight')
+
+
+def hopfinger():
+    
