@@ -166,7 +166,20 @@ def farago():
     ax.plot(rayleigh[:, 0], rayleigh[:, 1], color='black')
     ax.plot(membrane[:, 0], membrane[:, 1], color='black')
 
-    ax.plot(5.22, 1551, label='Case 1')
+    ax.plot(5.22, 1551, label='Case 1', marker='o')
+    ax.plot(11.6, 1551, label='Case 1', marker='o')
+    ax.plot(22.9, 1551, label='Case 1', marker='o')
+    ax.plot(52.7, 1551, label='Case 1', marker='o')
+
+    ax.plot(5.22, 2940, label='Case 1', marker='o')
+    ax.plot(11.6, 2940, label='Case 1', marker='o')
+    ax.plot(22.9, 2940, label='Case 1', marker='o')
+    ax.plot(52.7, 2940, label='Case 1', marker='o')
+
+    ax.plot(5.22, 6444, label='Case 1', marker='o')
+    ax.plot(11.6, 6444, label='Case 1', marker='o')
+    ax.plot(22.9, 6444, label='Case 1', marker='o')
+    ax.plot(52.7, 6444, label='Case 1', marker='o')
 
     ax.set_xscale('log')
     ax.set_yscale('log')
