@@ -200,6 +200,9 @@ def farago():
     # setting axis limits
     ax.set_xlim(1e-3, 1e3)
     ax.set_ylim(1e2, 1e5)
+    # labelling axis
+    ax.set_xlabel('$\\mathrm{We}_\\mathrm{g}$')
+    ax.set_ylabel('$\\mathrm{Re}_l$')
     # labelling rayleigh regime
     ax.text(1e-1, 1e3, 'Rayleigh regime')
     # labelling superpulsating regime
@@ -215,4 +218,25 @@ def farago():
 
 
 def hopfinger():
-    
+    # loading files
+    rayleigh = np.loadtxt('hopfinger_rayleigh.csv', delimiter=',')
+    nonaxisymmetric = np.loadtxt('hopfinger_nonaxisymmetric_rayleigh.csv',
+                                 delimiter=',')
+    wave_like = np.loadtxt('hopfinger_wave_like.csv', delimiter=',')
+    fiber = np.loadtxt('hopfinger_fiber.csv', delimiter=',')
+
+    # setting up plots
+    fig, ax = plt.subplots()
+
+    # plotting regime lines
+    ax.plot(rayleigh[:, 0], rayleigh[:, 1])
+    ax.plot(nonaxisymmetric[:, 0], nonaxisymmetric[:, 1])
+    ax.plot(wave_like[:, 0], wave_like[:, 1])
+    ax.plot(fiber[:, 0], fiber[:, 1])
+
+    # setting log scales
+    ax.set_xscale('log')
+    ax.set_yscale('log')
+
+    # setting axis limits
+    ax.set_xlim(1e-3, 1e5)
