@@ -240,3 +240,8 @@ def hopfinger():
 
     # setting axis limits
     ax.set_xlim(1e-3, 1e5)
+    ax.set_ylim(1e1, 1e6)
+
+    # labelling axis
+    ax.set_xlabel('$\\mathrm{We}_\\mathrm{g}$')
+    ax.set_ylabel('$\\mathrm{Re}_l$')
