@@ -248,7 +248,7 @@ def hopfinger():
 
     # labelling regimes
     ax.text(1e-2, 5e1, 'Rayleigh breakup', )
-    ax.text(1e0, 1e3, 'Non-axisymmetric Rayleigh breakup', )
+    ax.text(1e0, 1e3, 'Non-axisymmetric Rayleigh breakup', rotation=-45)
     ax.text(1e-1, 1e4, 'wave-like')
     ax.text(1e2, 1e4, 'membrane breakup')
     ax.text(1e2, 1e5, 'fiber type atomisation')
