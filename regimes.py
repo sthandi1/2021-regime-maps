@@ -166,27 +166,34 @@ def farago():
     ax.plot(rayleigh[:, 0], rayleigh[:, 1], color='black')
     ax.plot(membrane[:, 0], membrane[:, 1], color='black')
 
+    # plotting case locations
     ax.plot(5.22, 1551, label='Case 1', marker='o')
-    ax.plot(11.6, 1551, label='Case 1', marker='o')
-    ax.plot(22.9, 1551, label='Case 1', marker='o')
-    ax.plot(52.7, 1551, label='Case 1', marker='o')
+    ax.plot(11.6, 1551, label='Case 2', marker='v')
+    ax.plot(22.9, 1551, label='Case 3', marker='^')
+    ax.plot(52.7, 1551, label='Case 4', marker='<')
 
-    ax.plot(5.22, 2940, label='Case 1', marker='o')
-    ax.plot(11.6, 2940, label='Case 1', marker='o')
-    ax.plot(22.9, 2940, label='Case 1', marker='o')
-    ax.plot(52.7, 2940, label='Case 1', marker='o')
+    ax.plot(5.22, 2940, label='Case 5', marker='>')
+    ax.plot(11.6, 2940, label='Case 6', marker='1')
+    ax.plot(22.9, 2940, label='Case 7', marker='s')
+    ax.plot(52.7, 2940, label='Case 8', marker='p')
 
-    ax.plot(5.22, 6444, label='Case 1', marker='o')
-    ax.plot(11.6, 6444, label='Case 1', marker='o')
-    ax.plot(22.9, 6444, label='Case 1', marker='o')
-    ax.plot(52.7, 6444, label='Case 1', marker='o')
+    ax.plot(5.22, 6444, label='Case 9', marker='P')
+    ax.plot(11.6, 6444, label='Case 10', marker='*')
+    ax.plot(22.9, 6444, label='Case 11', marker='X')
+    ax.plot(52.7, 6444, label='Case 12', marker='D')
 
+    # setting log scale
     ax.set_xscale('log')
     ax.set_yscale('log')
+    # setting axis limits
     ax.set_xlim(1e-3, 1e3)
     ax.set_ylim(1e2, 1e5)
+    # labelling rayleigh regime
     ax.text(1e-1, 1e3, 'Rayleigh regime')
+    # labelling superpulsating regime
     ax.text(5e1, 3e2, 'Superpulsating regime')
+    # labelling fiber type regime
     ax.text(1e2, 1e4, 'Fiber type regime')
+    # annotating with arrow membrane type regime
     ax.annotate('Membrane type regime', xy=(5e1, 5e3), xytext=(1e1, 3e4),
                 arrowprops=dict(facecolor='black', width=0.5, headwidth=7))
