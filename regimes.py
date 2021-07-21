@@ -248,11 +248,11 @@ def hopfinger():
 
     # labelling regimes
     ax.text(1e-2, 5e1, 'Rayleigh breakup', )
-    ax.text(1e0, 1e3, 'Non-axisymmetric Rayleigh breakup', rotation=-45)
+    ax.text(1e-2, 2e2, 'Non-axisymmetric Rayleigh breakup', rotation=-35)
     ax.text(1e-1, 1e4, 'wave-like')
-    ax.text(1e2, 1e4, 'membrane breakup')
+    ax.text(1e2, 5e1, 'membrane breakup', rotation=-75)
     ax.text(1e2, 1e5, 'fiber type atomisation')
-    ax.text(1e3, 1e3, 'fiber type, recirculating gas cavity')
+    ax.text(1e3, 1e2, 'fiber type, \nrecirculating gas cavity')
 
     # plotting case locations
     ax.plot(5.22, 1551, label='Case 1', marker='o', color='black',
@@ -281,3 +281,5 @@ def hopfinger():
             linestyle='none')
     ax.plot(52.7, 6444, label='Case 12', marker='D', color='black',
             linestyle='none')
+
+    ax.legend()
