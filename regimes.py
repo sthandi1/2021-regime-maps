@@ -247,12 +247,12 @@ def hopfinger():
     ax.set_ylabel('$\\mathrm{Re}_l$')
 
     # labelling regimes
-    ax.text('Rayleigh breakup', 1e-2, 5e1)
-    ax.text('Non-axisymmetric Rayleigh breakup', 1e0, 1e3)
-    ax.text('wave-like', 1e-1, 1e4)
-    ax.text('membrane breakup', 1e2, 1e4)
-    ax.text('fiber type atomisation', 1e2, 1e5)
-    ax.text('fiber type, recirculating gas cavity', 1e3, 1e3)
+    ax.text(1e-2, 5e1, 'Rayleigh breakup', )
+    ax.text(1e0, 1e3, 'Non-axisymmetric Rayleigh breakup', )
+    ax.text(1e-1, 1e4, 'wave-like')
+    ax.text(1e2, 1e4, 'membrane breakup')
+    ax.text(1e2, 1e5, 'fiber type atomisation')
+    ax.text(1e3, 1e3, 'fiber type, recirculating gas cavity')
 
     # plotting case locations
     ax.plot(5.22, 1551, label='Case 1', marker='o', color='black',
