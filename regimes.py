@@ -162,14 +162,18 @@ def farago():
 
     # setting up plots
     fig, ax = plt.subplots()
-    ax.plot(superpulsating[:, 0], superpulsating[:, 1])
-    ax.plot(rayleigh[:, 0], rayleigh[:, 1])
-    ax.plot(membrane[:, 0], membrane[:, 1])
+    ax.plot(superpulsating[:, 0], superpulsating[:, 1], color='black')
+    ax.plot(rayleigh[:, 0], rayleigh[:, 1], color='black')
+    ax.plot(membrane[:, 0], membrane[:, 1], color='black')
+
+    ax.plot(5.22, 1551, label='Case 1')
+
     ax.set_xscale('log')
     ax.set_yscale('log')
     ax.set_xlim(1e-3, 1e3)
     ax.set_ylim(1e2, 1e5)
-    ax.text(10e-1, 10e3, 'Rayleigh regime')
-    ax.text(10e1, 10e3, 'Superpulsating regime')
-    ax.text(10e1, 10e4, 'Membrane type regime')
-    ax.text(10e2, 10e4, 'Fiber type regime')
+    ax.text(1e-1, 1e3, 'Rayleigh regime')
+    ax.text(5e1, 3e2, 'Superpulsating regime')
+    ax.text(1e2, 1e4, 'Fiber type regime')
+    ax.annotate('Membrane type regime', xy=(5e1, 5e3), xytext=(1e1, 3e4),
+                arrowprops=dict(facecolor='black', width=0.5, headwidth=7))
