@@ -210,3 +210,5 @@ def farago():
     ax.annotate('Membrane type regime', xy=(5e1, 8e3), xytext=(1e1, 3e4),
                 arrowprops=dict(facecolor='black', width=0.5, headwidth=7))
     ax.legend()
+    fig.set_size_inches(6, 4)
+    fig.savefig('farago_chigier_cases_regimes.pgf', bbox_inches='tight')
