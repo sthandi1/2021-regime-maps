@@ -167,20 +167,20 @@ def farago():
     ax.plot(membrane[:, 0], membrane[:, 1], color='black')
 
     # plotting case locations
-    ax.plot(5.22, 1551, label='Case 1', marker='o')
-    ax.plot(11.6, 1551, label='Case 2', marker='v')
-    ax.plot(22.9, 1551, label='Case 3', marker='^')
-    ax.plot(52.7, 1551, label='Case 4', marker='<')
+    ax.plot(5.22, 1551, label='Case 1', marker='o', color='black')
+    ax.plot(11.6, 1551, label='Case 2', marker='v', color='black)
+    ax.plot(22.9, 1551, label='Case 3', marker='^', color='black)
+    ax.plot(52.7, 1551, label='Case 4', marker='<', color='black)
 
-    ax.plot(5.22, 2940, label='Case 5', marker='>')
-    ax.plot(11.6, 2940, label='Case 6', marker='1')
-    ax.plot(22.9, 2940, label='Case 7', marker='s')
-    ax.plot(52.7, 2940, label='Case 8', marker='p')
+    ax.plot(5.22, 2940, label='Case 5', marker='>', color='black)
+    ax.plot(11.6, 2940, label='Case 6', marker='1', color='black)
+    ax.plot(22.9, 2940, label='Case 7', marker='s', color='black)
+    ax.plot(52.7, 2940, label='Case 8', marker='p', color='black)
 
-    ax.plot(5.22, 6444, label='Case 9', marker='P')
-    ax.plot(11.6, 6444, label='Case 10', marker='*')
-    ax.plot(22.9, 6444, label='Case 11', marker='X')
-    ax.plot(52.7, 6444, label='Case 12', marker='D')
+    ax.plot(5.22, 6444, label='Case 9', marker='P', color='black)
+    ax.plot(11.6, 6444, label='Case 10', marker='*', color='black)
+    ax.plot(22.9, 6444, label='Case 11', marker='X', color='black)
+    ax.plot(52.7, 6444, label='Case 12', marker='D', color='black)
 
     # setting log scale
     ax.set_xscale('log')
