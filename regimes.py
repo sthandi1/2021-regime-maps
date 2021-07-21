@@ -288,3 +288,26 @@ def hopfinger():
     fig.set_size_inches(6, 4)
     # saving as pgf file
     fig.savefig('hopfinger_cases_regime.pgf', bbox_inches='tight')
+
+
+def zhao_glr():
+    # loading files
+    rayleigh = np.loadtxt('zhao_glr_rayleigh.csv', delimiter=',')
+    bag = np.loadtxt('zhao_glr_bag.csv', delimiter=',')
+    membrane = np.loadtxt('zhao_glr_membrane.csv', delimiter=',')
+
+    # setting up plots
+    fig, ax = plt.subplots()
+
+    # plotting regime lines
+    ax.plot(rayleigh[:, 0], rayleigh[:, 1], color='black')
+    ax.plot(bag[:, 0], bag[:, 1], color='black')
+    ax.plot(membrane[:, 0], membrane[:, 1], color='black')
+
+    # setting log scales
+    ax.set_xscale('log')
+    ax.set_yscale('log')
+
+    # setting axis limits
+    ax.set_xlim(1e-2, 1e2)
+    ax.set_ylim(1e0, 1e3)
