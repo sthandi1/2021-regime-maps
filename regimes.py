@@ -229,10 +229,10 @@ def hopfinger():
     fig, ax = plt.subplots()
 
     # plotting regime lines
-    ax.plot(rayleigh[:, 0], rayleigh[:, 1])
-    ax.plot(nonaxisymmetric[:, 0], nonaxisymmetric[:, 1])
-    ax.plot(wave_like[:, 0], wave_like[:, 1])
-    ax.plot(fiber[:, 0], fiber[:, 1])
+    ax.plot(rayleigh[:, 0], rayleigh[:, 1], color='black')
+    ax.plot(nonaxisymmetric[:, 0], nonaxisymmetric[:, 1], color='black')
+    ax.plot(wave_like[:, 0], wave_like[:, 1], color='black')
+    ax.plot(fiber[:, 0], fiber[:, 1], color='black')
 
     # setting log scales
     ax.set_xscale('log')
