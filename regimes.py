@@ -290,6 +290,30 @@ def hopfinger():
     fig.savefig('hopfinger_cases_regime.pgf', bbox_inches='tight')
 
 
+def glr_calculator(weber_number, reynolds_number):
+    # liquid jet diameter
+    d_l = 2e-3
+    # gas jet diameter
+    d_g = 7e-3
+    # viscosity of liquid
+    mu_l = 8.9e-4
+    # density of liquid
+    rho_l = 1000
+    # surface tension
+    sigma = 0.07
+    # gas density
+    rho_g = 1.225
+    # liquid velocity
+    u_l = reynolds_number*mu_l/(rho_l*d_l)
+    # gas velocity
+    u_g = np.sqrt((weber_number*sigma)/(d_l*rho_g))+u_l
+    # liquid area
+    A_l = np.pi*d_l**2/4
+    A_g = np.pi*d_g**2/4 - A_l
+    glr = (rho_g*u_g*A_g)/(rho_l*u_g*A_g)
+    return glr
+
+
 def zhao_glr():
     # loading files
     rayleigh = np.loadtxt('zhao_glr_rayleigh.csv', delimiter=',')
