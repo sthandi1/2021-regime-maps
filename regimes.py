@@ -313,10 +313,10 @@ def zhao_glr():
     ax.set_ylim(1e0, 1e3)
 
     # labelling regimes
-    ax.text(1e0, 1e1, 'Rayleigh')
+    ax.text(1e0, 5e0, 'Rayleigh')
     ax.text(1e0, 2e1, 'Bag breakup')
-    ax.text(1e0, 5e1, 'Membrane-fiber regime')
-    ax.text(1e0, 5e2, 'Fiber breakup')
+    ax.text(5e-1, 5e1, 'Membrane-fiber regime')
+    ax.text(1e0, 3e2, 'Fiber breakup')
 
     # resizing figure
     fig.set_size_inches(6, 4)
