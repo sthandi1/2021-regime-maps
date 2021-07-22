@@ -342,5 +342,33 @@ def zhao_glr():
     ax.text(1e0, 5e1, 'Membrane-fiber regime')
     ax.text(1e0, 5e2, 'Fiber breakup')
 
+    # Plotting case locations
+    ax.plot(glr_calculator(5.22, 1551), 5.22, label='Case 1', marker='o',
+            color='black', linestyle='none')
+    ax.plot(glr_calculator(11.6, 1551), 11.6, label='Case 2', marker='v',
+            color='black', linestyle='none')
+    ax.plot(glr_calculator(22.9, 1551), 22.9, label='Case 3', marker='^',
+            color='black', linestyle='none')
+    ax.plot(glr_calculator(52.7, 1551), 52.7, label='Case 4', marker='<',
+            color='black', linestyle='none')
+
+    ax.plot(glr_calculator(5.22, 2940), 5.22, label='Case 5', marker='>',
+            color='black', linestyle='none')
+    ax.plot(glr_calculator(11.6, 2940), 11.6, label='Case 6', marker='1',
+            color='black', linestyle='none')
+    ax.plot(glr_calculator(22.9, 2940), 22.9, label='Case 7', marker='s',
+            color='black', linestyle='none')
+    ax.plot(glr_calculator(52.7, 2940), 52.7, label='Case 8', marker='p',
+            color='black', linestyle='none')
+
+    ax.plot(glr_calculator(5.22, 6444), 5.22, label='Case 9', marker='P',
+            color='black', linestyle='none')
+    ax.plot(glr_calculator(11.6, 6444), 11.6, label='Case 10', marker='*',
+            color='black', linestyle='none')
+    ax.plot(glr_calculator(22.9, 6444), 22.9, label='Case 11', marker='X',
+            color='black', linestyle='none')
+    ax.plot(glr_calculator(52.7, 6444), 52.7, label='Case 12', marker='D',
+            color='black', linestyle='none')
+
     # resizing figure
     fig.set_size_inches(6, 4)
