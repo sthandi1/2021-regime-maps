@@ -169,29 +169,29 @@ def farago():
     # plotting case locations
     ax.plot(5.22, 1551, label='Case 1', marker='o', color='black',
             linestyle='none')
-    ax.plot(11.6, 1551, label='Case 2', marker='v', color='black',
+    ax.plot(11.6, 1551, label='Case 2', marker='X', color='black',
             linestyle='none')
     ax.plot(22.9, 1551, label='Case 3', marker='^', color='black',
             linestyle='none')
-    ax.plot(52.7, 1551, label='Case 4', marker='<', color='black',
+    ax.plot(52.7, 1551, label='Case 4', marker='s', color='black',
             linestyle='none')
 
-    ax.plot(5.22, 2940, label='Case 5', marker='>', color='black',
+    ax.plot(5.22, 2940, label='Case 5', marker='o', color='red',
             linestyle='none')
-    ax.plot(11.6, 2940, label='Case 6', marker='1', color='black',
+    ax.plot(11.6, 2940, label='Case 6', marker='X', color='red',
             linestyle='none')
-    ax.plot(22.9, 2940, label='Case 7', marker='s', color='black',
+    ax.plot(22.9, 2940, label='Case 7', marker='^', color='red',
             linestyle='none')
-    ax.plot(52.7, 2940, label='Case 8', marker='p', color='black',
+    ax.plot(52.7, 2940, label='Case 8', marker='s', color='red',
             linestyle='none')
 
-    ax.plot(5.22, 6444, label='Case 9', marker='P', color='black',
+    ax.plot(5.22, 6444, label='Case 9', marker='o', color='blue',
             linestyle='none')
-    ax.plot(11.6, 6444, label='Case 10', marker='*', color='black',
+    ax.plot(11.6, 6444, label='Case 10', marker='X', color='blue',
             linestyle='none')
-    ax.plot(22.9, 6444, label='Case 11', marker='X', color='black',
+    ax.plot(22.9, 6444, label='Case 11', marker='^', color='blue',
             linestyle='none')
-    ax.plot(52.7, 6444, label='Case 12', marker='D', color='black',
+    ax.plot(52.7, 6444, label='Case 12', marker='s', color='blue',
             linestyle='none')
 
     # setting log scale
@@ -256,29 +256,29 @@ def hopfinger():
     # plotting case locations
     ax.plot(5.22, 1551, label='Case 1', marker='o', color='black',
             linestyle='none')
-    ax.plot(11.6, 1551, label='Case 2', marker='v', color='black',
+    ax.plot(11.6, 1551, label='Case 2', marker='X', color='black',
             linestyle='none')
     ax.plot(22.9, 1551, label='Case 3', marker='^', color='black',
             linestyle='none')
-    ax.plot(52.7, 1551, label='Case 4', marker='<', color='black',
+    ax.plot(52.7, 1551, label='Case 4', marker='s', color='black',
             linestyle='none')
 
-    ax.plot(5.22, 2940, label='Case 5', marker='>', color='black',
+    ax.plot(5.22, 2940, label='Case 5', marker='o', color='red',
             linestyle='none')
-    ax.plot(11.6, 2940, label='Case 6', marker='1', color='black',
+    ax.plot(11.6, 2940, label='Case 6', marker='X', color='red',
             linestyle='none')
-    ax.plot(22.9, 2940, label='Case 7', marker='s', color='black',
+    ax.plot(22.9, 2940, label='Case 7', marker='^', color='red',
             linestyle='none')
-    ax.plot(52.7, 2940, label='Case 8', marker='p', color='black',
+    ax.plot(52.7, 2940, label='Case 8', marker='s', color='red',
             linestyle='none')
 
-    ax.plot(5.22, 6444, label='Case 9', marker='P', color='black',
+    ax.plot(5.22, 6444, label='Case 9', marker='o', color='blue',
             linestyle='none')
-    ax.plot(11.6, 6444, label='Case 10', marker='*', color='black',
+    ax.plot(11.6, 6444, label='Case 10', marker='X', color='blue',
             linestyle='none')
-    ax.plot(22.9, 6444, label='Case 11', marker='X', color='black',
+    ax.plot(22.9, 6444, label='Case 11', marker='^', color='blue',
             linestyle='none')
-    ax.plot(52.7, 6444, label='Case 12', marker='D', color='black',
+    ax.plot(52.7, 6444, label='Case 12', marker='s', color='blue',
             linestyle='none')
 
     # adding legend
@@ -311,7 +311,8 @@ def glr_calculator(weber_number, reynolds_number):
     A_l = np.pi*d_l**2/4
     A_g = np.pi*d_g**2/4 - A_l
     glr = (rho_g*u_g*A_g)/(rho_l*u_g*A_g)
-    return glr
+    ar = A_l/A_g
+    return glr, ar
 
 
 def zhao_glr():
@@ -332,9 +333,7 @@ def zhao_glr():
     ax.set_xscale('log')
     ax.set_yscale('log')
 
-    # setting axis limits
-    ax.set_xlim(1e-2, 1e2)
-    ax.set_ylim(1e0, 1e3)
+
 
     # labelling regimes
     ax.text(1e0, 1e1, 'Rayleigh')
